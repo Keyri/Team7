@@ -5,8 +5,8 @@ public class CharacterController
 	int movementSpeed = 5;
 	static int sizeX = 10;
 	static int sizeY = 30;
-	static int posX;
-	static int posY;
+	static int posX = 600;
+	static int posY = 200;
 	
 	static void draw(Graphics2D g)	
 	{

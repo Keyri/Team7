@@ -34,8 +34,8 @@ public class Mazematics extends JPanel
 
 		g2d.setColor(Color.BLACK); //set score color
 		g2d.setFont(new Font("Verdana", Font.BOLD, 30)); //Set font of score
-		g2d.drawString("Start Game", 10, 30); //Get score value and draw
-		g2d.drawString("Instructions", 10, 70); //Get score value and draw
+		g2d.drawString("Press Enter to \nStart Game", 400, 30); //Get score value and draw
+		g2d.drawString("Instructions:\nWalk around solving math issues and saving the universe", 10, 400); //Get score value and draw
 	}
 	
 	public static void main(String[] args) throws InterruptedException 
