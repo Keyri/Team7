@@ -1,4 +1,5 @@
 package MazeMatics;
+import java.awt.Color;
 import java.awt.Graphics2D;
 
 public class CharacterController 
@@ -19,11 +20,12 @@ public class CharacterController
 	
 	CharacterController()
 	{
-		//input = new Input();
+
 	}
 	
 	static void draw(Graphics2D g)	
 	{
+		g.setColor(Color.blue);
 		g.fillOval(posX, posY, sizeX, sizeY);
 	}
 	

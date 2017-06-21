@@ -32,7 +32,12 @@ public class Window extends JPanel
 		super.paint(g); //Cleans screen
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON); //Anti-aliasing
-		CharacterController.draw(g2d); //Redraws Window
+		
+		//Rooms: Loops through each room and draws room
+		for(Room room:Game.rooms)
+			room.draw(g2d); //draws Rooms
+		//Character
+		CharacterController.draw(g2d); //draws Character
 		
 		//Title and start
 		g2d.setColor(Color.BLACK); //set font color
