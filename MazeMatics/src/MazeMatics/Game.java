@@ -8,11 +8,12 @@ public class Game extends JPanel
 	
 	public Game() 
 	{			
-		//player = new CharacterController();
+
 	}
 	
 	CharacterController getPlayer()
 	{
+		//Returns player referenced by this object
 		return player;
 	}
 	

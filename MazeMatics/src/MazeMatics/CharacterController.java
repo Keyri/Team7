@@ -3,7 +3,7 @@ import java.awt.Graphics2D;
 
 public class CharacterController 
 {
-		int movementSpeed = 2;
+	int movementSpeed = 1;
 	
 	//Size of character
 	static int sizeX = 10;
@@ -39,11 +39,19 @@ public class CharacterController
 		if(Input.right)
 			accX = movementSpeed;
 		
+		//Run
+		if(Input.run)
+			movementSpeed = 2;
+		
 		//Remove acceleration on key release
 		if(!Input.up && !Input.down)
 			accY = 0;
 		if(!Input.left && !Input.right)
 			accX = 0;
+		
+		//Stop Running
+		if(!Input.run)
+			movementSpeed = 1;
 	}
 	
 	String move()

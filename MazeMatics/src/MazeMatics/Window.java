@@ -32,12 +32,27 @@ public class Window extends JPanel
 		super.paint(g); //Cleans screen
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON); //Anti-aliasing
-		CharacterController.draw(g2d); //Repaints ball
-
-		g2d.setColor(Color.BLACK); //set score color
-		g2d.setFont(new Font("Verdana", Font.BOLD, 30)); //Set font of score
-		g2d.drawString("Press Enter to \nStart Game(TEMP)", 200, 30); //Get score value and draw
-		g2d.drawString("Instructions:\nWalk around solving math issues and saving the universe(TEMP)", 10, 300); //Get score value and draw
-		g2d.drawString("Controls(TEMP)", 10, 450); //Get score value and draw
+		CharacterController.draw(g2d); //Redraws Window
+		
+		//Title and start
+		g2d.setColor(Color.BLACK); //set font color
+		g2d.setFont(new Font("Verdana", Font.BOLD, 40)); //Set Font and size
+		g2d.drawString("MazeMatic", 500, 50);
+		g2d.drawString("Press Enter to \nStart Game", 350, 750); //Temp text draw
+		
+		//Instructions
+		g2d.setFont(new Font("Verdana", Font.PLAIN, 25)); //Set Font and size
+		g2d.drawString("Navigate through a maze and solve math problems to", 300, 350);
+		g2d.drawString("proceed through doors until you reach the Math Wizard", 300, 400);
+		
+		//Controls
+		g2d.setFont(new Font("Verdana", Font.BOLD, 30)); //Set Font and size
+		g2d.drawString("Controls", 10, 50); //Temp controls draw
+		g2d.setFont(new Font("Verdana", Font.PLAIN, 20));
+		g2d.drawString("Walk Up: Up arrow", 10, 75);
+		g2d.drawString("Walk Down: Down arrow", 10, 100);
+		g2d.drawString("Walk Left: Left arrow", 10, 125);
+		g2d.drawString("Walk Right: Right arrow", 10, 150);
+		g2d.drawString("Run: Shift", 10, 175);	
 	}
 }
