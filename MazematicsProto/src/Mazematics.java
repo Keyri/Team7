@@ -11,15 +11,24 @@ import javax.swing.JPanel;
 
 @SuppressWarnings("serial")
 public class Mazematics extends JPanel 
-{
+{	
+	CharacterController player = new CharacterController();
+	
 	public Mazematics() 
-	{		
-		setFocusable(true);
+	{			
+		KeyListener input = new Input();
+		addKeyListener(input);
+		setFocusable(true);	
 	}
 	
-	private void move() //Updated ball and racquet position
+	CharacterController getPlayer()
 	{
-		//ball.move();
+		return player;
+	}
+	
+	private void move()
+	{
+		player.move();
 		//racquet.move();
 	}
 
@@ -28,14 +37,14 @@ public class Mazematics extends JPanel
 	{
 		super.paint(g); //Cleans screen
 		Graphics2D g2d = (Graphics2D) g;
-		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, //Smoothes edges
-				RenderingHints.VALUE_ANTIALIAS_ON);
+		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON); //Anti-aliasing
 		CharacterController.draw(g2d); //Repaints ball
 
 		g2d.setColor(Color.BLACK); //set score color
 		g2d.setFont(new Font("Verdana", Font.BOLD, 30)); //Set font of score
-		g2d.drawString("Press Enter to \nStart Game", 400, 30); //Get score value and draw
-		g2d.drawString("Instructions:\nWalk around solving math issues and saving the universe", 10, 400); //Get score value and draw
+		g2d.drawString("Press Enter to \nStart Game", 200, 30); //Get score value and draw
+		g2d.drawString("Instructions:\nWalk around solving math issues and saving the universe", 10, 300); //Get score value and draw
+		g2d.drawString("Controls", 10, 450); //Get score value and draw
 	}
 	
 	public static void main(String[] args) throws InterruptedException 
@@ -52,7 +61,5 @@ public class Mazematics extends JPanel
 			mazematics.repaint(); //Repaint
 			Thread.sleep(10); //Wait
 		}
-
 	}
-
 }
