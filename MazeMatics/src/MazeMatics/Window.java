@@ -42,7 +42,7 @@ public class Window extends JPanel
 		//Title and start
 		g2d.setColor(Color.BLACK); //set font color
 		g2d.setFont(new Font("Verdana", Font.BOLD, 40)); //Set Font and size
-		g2d.drawString("MazeMatic", 500, 50);
+		g2d.drawString("MazeMatics", 500, 50);
 		g2d.drawString("Press Enter to \nStart Game", 350, 750); //Temp text draw
 		
 		//Instructions
