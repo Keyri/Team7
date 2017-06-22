@@ -14,7 +14,7 @@ public class Input implements KeyListener
 		@Override
 		public void keyTyped(KeyEvent e) 
 		{
-
+			//Not Used
 		}
 
 		@Override
@@ -34,6 +34,7 @@ public class Input implements KeyListener
 			if (e.getKeyCode() == KeyEvent.VK_SHIFT)
 				run = true;
 			
+			//debug output
 			System.out.println("keyPressed="+KeyEvent.getKeyText(e.getKeyCode())); //Debug key message
 		}
 

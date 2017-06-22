@@ -11,15 +11,16 @@ public class Game extends JPanel
 	//Create Rooms here: new Room(name, sizeX, sizeY, PosX, PosY, color)
 	static Room[] rooms = 
 	{
-		new Room("testRoom1", 100, 50, 600, 600, Color.black),
-		new Room("testRoom2", 100, 150, 400, 150, Color.lightGray),
-		new Room("testRoom3", 150, 200, 400, 450, Color.gray)
+		new Room("UnrevealedRoom", 200, 200, 800, 450, Color.black),
+		new Room("RevealedRoom1", 100, 150, 800, 150, Color.white),
+		new Room("RevealedRoom2", 100, 150, 400, 150, Color.lightGray),
+		new Room("RevealedRoom3", 150, 200, 400, 450, Color.gray),
+		new Room("Hallway", 200, 50, 50, 450, Color.lightGray)
 	};
-
 	
 	public Game() 
 	{			
-
+		//Constructor
 	}
 	
 	CharacterController getPlayer()

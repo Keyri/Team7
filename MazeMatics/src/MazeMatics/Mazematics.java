@@ -11,16 +11,16 @@ public class Mazematics extends JPanel
 	
 	public Mazematics() 
 	{			
-		
+		//Constructor
 	}
 		
 	public static void main(String[] args) throws InterruptedException 
 	{
 		while (true) 
 		{ 
-			game.move(); //Update position
+			game.move(); //Update positions
 			window.repaint(); //Repaint
-			Thread.sleep(10); //Wait
+			Thread.sleep(20); //Slows game down
 		}
 	}
 }

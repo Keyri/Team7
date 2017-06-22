@@ -1,5 +1,6 @@
 package MazeMatics;
 
+import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics2D;
 
@@ -10,7 +11,7 @@ public class Room
 	private int sizeY;
 	private int posX;
 	private int posY;
-	private Color color;
+	Color color;
 	
 	Room(String name, int sizeX, int sizeY, int posX, int posY, Color color)
 	{
@@ -22,10 +23,42 @@ public class Room
 		this.color = color;
 	}
 	
+	int getPosX()
+	{
+		return posX;
+	}
+	
+	int getPosY()
+	{
+		return posY;
+	}
+	
+	int getSizeX()
+	{
+		return sizeX;
+	}
+	
+	int getSizeY()
+	{
+		return sizeY;
+	}
+	
+	int[] bounds() //Not Yet Implemented
+	{
+		//TODO: Calculate bounds here for collision
+		int[] bounds = {0, 0};
+		return bounds;
+	}
 	
 	void draw(Graphics2D g)	
 	{
+		//Draw Room
 		g.setColor(color);
-		g.fillRect(posX, posY, sizeX, sizeY);
+		g.fillRect(posX, posY, sizeX, sizeY); //room
+		
+		//Draw Border Outline
+		g.setColor(Color.black);
+		g.setStroke(new BasicStroke(5)); //border thickness
+		g.drawRect(posX, posY, sizeX, sizeY); //border
 	}
 }

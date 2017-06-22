@@ -20,7 +20,7 @@ public class CharacterController
 	
 	CharacterController()
 	{
-
+		//Constructor
 	}
 	
 	static void draw(Graphics2D g)	
