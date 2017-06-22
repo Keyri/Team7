@@ -11,8 +11,12 @@ public class Room
 	private int sizeY;
 	private int posX;
 	private int posY;
-	Color color;
 	
+	Color color = Color.black;;
+	Color borderColor = Color.black;
+	int borderThickness = 5;
+	
+	//Constructor
 	Room(String name, int sizeX, int sizeY, int posX, int posY, Color color)
 	{
 		this.name = name;
@@ -23,7 +27,31 @@ public class Room
 		this.color = color;
 	}
 	
-	int getPosX()
+	//Overloaded Constructor
+	Room(String name, int sizeX, int sizeY, int posX, int posY)
+	{
+		this.name = name;
+		this.sizeX = sizeX;
+		this.sizeY = sizeY;
+		this.posX = posX;
+		this.posY = posY;
+	}
+	
+	//Overloaded Constructor
+	Room(String name, int sizeX, int sizeY, int posX, int posY, Color color, Color borderColor, int borderThickness)
+	{
+		this.name = name;
+		this.sizeX = sizeX;
+		this.sizeY = sizeY;
+		this.posX = posX;
+		this.posY = posY;
+		this.color = color;
+		this.borderColor = borderColor;
+		this.borderThickness = borderThickness;
+	}
+	
+	//Get Position/Size
+	int getPos()
 	{
 		return posX;
 	}
@@ -57,8 +85,8 @@ public class Room
 		g.fillRect(posX, posY, sizeX, sizeY); //room
 		
 		//Draw Border Outline
-		g.setColor(Color.black);
-		g.setStroke(new BasicStroke(5)); //border thickness
+		g.setColor(borderColor);
+		g.setStroke(new BasicStroke(borderThickness)); //border thickness
 		g.drawRect(posX, posY, sizeX, sizeY); //border
 	}
 }

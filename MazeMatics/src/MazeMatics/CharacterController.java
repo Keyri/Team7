@@ -56,6 +56,7 @@ public class CharacterController
 			movementSpeed = 1;
 	}
 	
+	//Move relative to current position
 	String move()
 	{	
 		processInput();
@@ -64,7 +65,8 @@ public class CharacterController
 		return posX + ", " + posY;	
 	}
 	
-	String moveAbs (int x, int y)
+	//Instantly move to target position
+	String teleport(int x, int y)
 	{
 		posX = x;
 		posY = y;
