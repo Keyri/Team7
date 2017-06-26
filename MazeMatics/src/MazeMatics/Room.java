@@ -6,11 +6,11 @@ import java.awt.Graphics2D;
 
 public class Room 
 {
-	private String name;
-	private int sizeX;
-	private int sizeY;
-	private int posX;
-	private int posY;
+	String name;
+	int sizeX;
+	int sizeY;
+	int posX;
+	int posY;
 	
 	Color color = Color.black;;
 	Color borderColor = Color.black;
@@ -25,6 +25,14 @@ public class Room
 		this.posX = posX;
 		this.posY = posY;
 		this.color = color;
+	}
+	
+	//Overloaded Constructor
+	Room(String name, int sizeX, int sizeY)
+	{
+		this.name = name;
+		this.sizeX = sizeX;
+		this.sizeY = sizeY;
 	}
 	
 	//Overloaded Constructor
@@ -48,28 +56,7 @@ public class Room
 		this.color = color;
 		this.borderColor = borderColor;
 		this.borderThickness = borderThickness;
-	}
-	
-	//Get Position/Size
-	int getPos()
-	{
-		return posX;
-	}
-	
-	int getPosY()
-	{
-		return posY;
-	}
-	
-	int getSizeX()
-	{
-		return sizeX;
-	}
-	
-	int getSizeY()
-	{
-		return sizeY;
-	}
+	}	
 	
 	int[] bounds() //Not Yet Implemented
 	{
@@ -78,6 +65,16 @@ public class Room
 		return bounds;
 	}
 	
+	void linkRoom(Room linkedRoom, String connectionPoint, float offset)
+	{
+		//connection offset should be 0.2f - 1
+		if(connectionPoint.toUpperCase() == "RIGHT")
+		{
+			posY = (int) (linkedRoom.posY * offset);
+			posX = linkedRoom.posX + linkedRoom.sizeX;
+		}
+	}
+		
 	void draw(Graphics2D g)	
 	{
 		//Draw Room

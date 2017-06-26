@@ -24,6 +24,10 @@ public class Game extends JPanel
 	public Game() 
 	{			
 		//Constructor
+		rooms[2].linkRoom(rooms[1], linkSide.RIGHT, 0.8f);
+		rooms[4].linkRoom(rooms[2], linkSide.RIGHT, 1);
+		//rooms[3].linkRoomY(rooms[2], 1);
+		//rooms[4].linkRoomY(rooms[1], 1);
 	}
 	
 	CharacterController getPlayer()
