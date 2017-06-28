@@ -67,11 +67,29 @@ public class Room
 	
 	void linkRoom(Room linkedRoom, String connectionPoint, float offset)
 	{
-		//connection offset should be 0.2f - 1
+		//connection offset should be between 0.1f - 1.9
 		if(connectionPoint.toUpperCase() == "RIGHT")
 		{
-			posY = (int) (linkedRoom.posY * offset);
+			posY = (int) (linkedRoom.posY + ((linkedRoom.sizeY - sizeY) / 2) * offset);
 			posX = linkedRoom.posX + linkedRoom.sizeX;
+		}
+		
+		if(connectionPoint.toUpperCase() == "LEFT")
+		{
+			posY = (int) (linkedRoom.posY + ((linkedRoom.sizeY - sizeY) / 2) * offset);
+			posX = linkedRoom.posX - linkedRoom.sizeX * 2;
+		}
+		
+		if(connectionPoint.toUpperCase() == "TOP")
+		{
+			posX = (int) (linkedRoom.posX + ((linkedRoom.sizeX - sizeX) / 2) * offset);
+			posY = linkedRoom.posY - linkedRoom.sizeY;
+		}
+		
+		if(connectionPoint.toUpperCase() == "BOTTOM")
+		{
+			posX = (int) (linkedRoom.posX + ((linkedRoom.sizeX - sizeX) / 2) * offset);
+			posY = linkedRoom.posY + linkedRoom.sizeY * 2;
 		}
 	}
 		
