@@ -77,19 +77,19 @@ public class Room
 		if(connectionPoint.toUpperCase() == "LEFT")
 		{
 			posY = (int) (linkedRoom.posY + ((linkedRoom.sizeY - sizeY) / 2) * offset);
-			posX = linkedRoom.posX - linkedRoom.sizeX * 2;
+			posX = linkedRoom.posX - sizeX;//linkedRoom.sizeX * 2;
 		}
 		
 		if(connectionPoint.toUpperCase() == "TOP")
 		{
 			posX = (int) (linkedRoom.posX + ((linkedRoom.sizeX - sizeX) / 2) * offset);
-			posY = linkedRoom.posY - linkedRoom.sizeY;
+			posY = linkedRoom.posY - sizeY;
 		}
 		
 		if(connectionPoint.toUpperCase() == "BOTTOM")
 		{
 			posX = (int) (linkedRoom.posX + ((linkedRoom.sizeX - sizeX) / 2) * offset);
-			posY = linkedRoom.posY + linkedRoom.sizeY * 2;
+			posY = linkedRoom.posY + linkedRoom.sizeY; //* 2
 		}
 	}
 		

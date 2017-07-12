@@ -11,8 +11,8 @@ public class CharacterController
 	static int sizeY = 30;
 	
 	//current position
-	static int posX = 600;
-	static int posY = 200;
+	static int posX = 90;
+	static int posY = 350;
 	
 	//Current acceleration
 	int accX = 0;
