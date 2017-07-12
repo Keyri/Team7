@@ -3,6 +3,7 @@ package MazeMatics;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.awt.Rectangle;
 
 public class Room 
 {
@@ -58,12 +59,12 @@ public class Room
 		this.borderThickness = borderThickness;
 	}	
 	
-	int[] bounds() //Not Yet Implemented
-	{
+	//int[] bounds() //Not Yet Implemented
+	//{
 		//TODO: Calculate bounds here for collision
-		int[] bounds = {0, 0};
-		return bounds;
-	}
+		//int[] bounds = {0, 0};
+		//return bounds;
+	//}
 	
 	void linkRoom(Room linkedRoom, String connectionPoint, float offset)
 	{
@@ -103,5 +104,9 @@ public class Room
 		g.setColor(borderColor);
 		g.setStroke(new BasicStroke(borderThickness)); //border thickness
 		g.drawRect(posX, posY, sizeX, sizeY); //border
+	}
+	
+	public Rectangle getBounds() {
+		return new Rectangle(sizeX, sizeY, posX, posY);
 	}
 }

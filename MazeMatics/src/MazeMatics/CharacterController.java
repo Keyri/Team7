@@ -1,6 +1,7 @@
 package MazeMatics;
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.awt.Rectangle;
 
 public class CharacterController 
 {
@@ -54,6 +55,10 @@ public class CharacterController
 		//Stop Running
 		if(!Input.run)
 			movementSpeed = 1;
+		if(collision()){
+		accX = - 1;
+		accY = - 1;
+	}
 	}
 	
 	//Move relative to current position
@@ -72,4 +77,17 @@ public class CharacterController
 		posY = y;
 		return x + ", " + y;	
 	}
+	public Rectangle getBounds() {
+		return new Rectangle(sizeX, sizeY, posX, posY);
+	}
+	private Boolean collision() {
+		boolean collide = false;
+		for (Room room : Game.rooms){
+			if(room.getBounds().intersects(getBounds())){
+				collide = true;
+			}
+		}
+		return collide;
 }
+}
+
