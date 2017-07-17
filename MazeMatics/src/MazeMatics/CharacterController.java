@@ -2,7 +2,6 @@ package MazeMatics;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
-import java.awt.geom.Line2D;
 import java.awt.geom.Rectangle2D.Float;
 
 public class CharacterController 
@@ -20,6 +19,8 @@ public class CharacterController
 	//Current acceleration
 	int accX = 0;
 	int accY = 0;
+	
+	Rectangle mask = new Rectangle(sizeX, sizeY, posX, posY);
 	
 	CharacterController()
 	{
@@ -75,7 +76,9 @@ public class CharacterController
 		processInput();
 		posX += accX;
 		posY += accY;
-		return posX + ", " + posY;	
+		mask.x = Game.player.getX();
+		mask = new Rectangle(Game.player.sizeX, sizeY, posX, posY);
+		return posX + ", " + posY;
 	}
 	
 	//Instantly move to target position
@@ -86,12 +89,14 @@ public class CharacterController
 		return x + ", " + y;	
 	}
 	
-	Float mask = new Rectangle.Float(sizeX, sizeY, posX, posY);
+	
 
 	protected boolean wallCollision() {
 	     for (Room room : Game.rooms) {
-	          if (Room.intersects(this.mask))
-	               return true;
+	          if (room.collider.intersects(mask))
+	          {
+	        	  System.out.print("Colided");
+	               return true;}
 	     }
 	     return false;
 	}

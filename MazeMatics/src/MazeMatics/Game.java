@@ -77,6 +77,7 @@ public class Game extends JPanel
 		if(!isPaused)
 		{
 			player.move();
+			
 			//More moves and actions here
 		}		
 	}

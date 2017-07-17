@@ -22,6 +22,8 @@ public class Mazematics extends JPanel
 			game.update(); //Game loop
 			Input.clean(); //Reset input pressed and released states
 			window.repaint(); //Repaints window
+			System.out.println(game.player.mask.x);
+			System.out.println(game.player.mask.y);
 			Thread.sleep(20); //Slows game down
 		}
 	}

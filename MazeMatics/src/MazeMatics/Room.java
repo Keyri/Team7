@@ -3,18 +3,16 @@ package MazeMatics;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics2D;
-import java.awt.geom.Line2D;
-import java.awt.geom.Rectangle2D;
 import java.awt.Rectangle;
-import java.awt.geom.Rectangle2D.Float;
 
-public class Room 
+public class Room
 {
 	String name;
 	int sizeX;
 	int sizeY;
 	int posX;
 	int posY;
+	Rectangle collider = new Rectangle(sizeX, sizeY, posX, posY);
 	
 	Color color = Color.black;;
 	Color borderColor = Color.black;
