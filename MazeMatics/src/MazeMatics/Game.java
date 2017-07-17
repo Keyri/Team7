@@ -1,5 +1,6 @@
 package MazeMatics;
 import java.awt.Color;
+//import java.awt.Rectangle;
 
 import javax.swing.JPanel;
 
@@ -79,4 +80,7 @@ public class Game extends JPanel
 			//More moves and actions here
 		}		
 	}
+	//public Rectangle getBounds() {
+		//return new Rectangle(75, 75, 50, 325);
+//}
 }

@@ -2,6 +2,8 @@ package MazeMatics;
 import java.awt.Color;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
+import java.awt.geom.Line2D;
+import java.awt.geom.Rectangle2D.Float;
 
 public class CharacterController 
 {
@@ -55,10 +57,16 @@ public class CharacterController
 		//Stop Running
 		if(!Input.run)
 			movementSpeed = 1;
-		if(collision()){
-		accX = - 1;
-		accY = - 1;
+				
+		if(wallCollision()){
+			accX = - 1;
+			accY = - 1;
 	}
+		
+		//if(collision()){
+			//accX = - 1;
+			//accY = - 1;
+		//}
 	}
 	
 	//Move relative to current position
@@ -77,17 +85,27 @@ public class CharacterController
 		posY = y;
 		return x + ", " + y;	
 	}
-	public Rectangle getBounds() {
-		return new Rectangle(sizeX, sizeY, posX, posY);
-	}
-	private Boolean collision() {
-		boolean collide = false;
-		for (Room room : Game.rooms){
-			if(room.getBounds().intersects(getBounds())){
-				collide = true;
-			}
-		}
-		return collide;
-}
-}
+	
+	Float mask = new Rectangle.Float(sizeX, sizeY, posX, posY);
 
+	protected boolean wallCollision() {
+	     for (Room room : Game.rooms) {
+	          if (Room.intersects(this.mask))
+	               return true;
+	     }
+	     return false;
+	}
+	
+/*public Rectangle getBounds() {
+				return new Rectangle(sizeX, sizeY, posX, posY);
+			}
+			private Boolean collision() {
+				boolean collide = false;
+				for (Room Room : Game.rooms){
+					if(Game.getBounds().intersects(getBounds())){
+						collide = true;
+					}
+			}
+				return collide;
+		 }*/
+}
