@@ -1,0 +1,100 @@
+Multiplication:
+
+1.	12 x 6 =
+2.	85 x 9 =
+3.	20 x 4 x 7 =
+4.	33 x 11 x 3 =
+5.	620 x 5 =
+6.	550 x 380 =
+7.	2,040 x 360 =
+8.	7,000 x 20 x 10 =
+9.	Bruce traveled 600 miles each day of a 10 day trip.
+	How far did he go during the entire trip?
+10.	30 children each sold 20 items for the school fund-raiser.
+	Each child earned $100 for the school.
+	How much money did the school collect?
+	
+Answers (Multiplication):
+1.	72
+2.	765
+3.	560
+4.	1089
+5.	3100
+6.	209000
+7.	734400
+8.	1400000
+9.	6000 miles
+10.	$ 2000
+
+Division:
+1.	22/2
+2.	36/4
+3.	546/3
+4.	768/16
+5.	840/14
+6.	Kristy helped the kindergarten teacher put a total of 
+	192 crayos into 8 boxes. How many crayons did they put into
+	each box?
+7.	The scout troop has to finish a 12-mile hike in 3 hours.
+	How many miles an hour will they have to walk?
+8.	At her slumber party, Shelly had 4 friends and 25 pieces of candy.
+	If she kept 5 pieces and divided the rest among her friends, how many
+	pieces did each friend get?
+9.	Kenny's book has 147 pages. He wants to read the same number of pages 
+	each day and finish reading the book in 7 days.  How many pages should
+	he read each day?
+10.	Brian and 2 friends are going to share 27 marbles.  How many will each
+	person get?
+
+Answers (Division):
+1.	11
+2.	9
+3.	182
+4.	48
+5.	60
+6.	24
+7.	4
+8.	5
+9.	21
+10.	9
+
+Fractions:
+1.	Change into fraction: 0.6 =
+2.	Change into fraction: 0.751 =
+3.	Change into decimal: 3/10 =
+4.	Change into decimal: 89/100 =
+5.	Find the greatest common factor for 56 and 72
+6.	Find the greatest common factor for 45 and 81
+7.	Find the least common multiple for 11 and 4
+8.	Find the least common multiple for 5 and 3
+9.	Compare: Make the statement true
+	0.4 ___ 2/3
+10.	Compare: Make the statement true
+	1.25 ___ 3/2
+
+Answers (Fractions):
+1.	6/10
+2.	751/1000
+3.	0.3
+4.	0.89
+5.	8
+6.	9
+7.	44
+8.	15
+9.	<
+10.	<
+
+Boss:
+1.	3/5 + 1/5 =
+2.	2 3/6 - 4/5 =
+3.	Change to a proper fraction: 65/4
+4.	Change to an improper fraction: 8 3/12
+5.	2/6 x 1/2 =
+
+Answers (Boss):
+1.	4/5
+2.	1 7/10
+3.	16 1/4
+4.	99/12
+5.	1/6
+
