@@ -3,14 +3,16 @@ package MazeMatics;
 import java.awt.BasicStroke;
 import java.awt.Color;
 import java.awt.Graphics2D;
+import java.awt.Rectangle;
 
-public class Room 
+public class Room
 {
 	String name;
 	int sizeX;
 	int sizeY;
 	int posX;
 	int posY;
+	Rectangle collider = new Rectangle(sizeX, sizeY, posX, posY);
 	
 	Color color = Color.black;;
 	Color borderColor = Color.black;
@@ -104,4 +106,10 @@ public class Room
 		g.setStroke(new BasicStroke(borderThickness)); //border thickness
 		g.drawRect(posX, posY, sizeX, sizeY); //border
 	}
+
+
+
+//public Rectangle getBounds() {
+		//return new Rectangle(sizeX, sizeY, posX, posY);
+//}
 }
