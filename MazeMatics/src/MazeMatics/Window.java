@@ -54,12 +54,13 @@ public class Window extends JPanel
 		g2d.drawString("Down: Down arrow", 10, 125);
 		g2d.drawString("Left: Left arrow", 10, 150);
 		g2d.drawString("Right: Right arrow", 10, 175);
-		g2d.drawString("Run: Shift", 10, 200);	
+		g2d.drawString("Run: Shift", 10, 200);
 		
 		//Rooms: Loops through each room and draws room
 		for(Room room:Game.rooms)
 			room.draw(g2d); //draws Rooms
 		//Character
 		CharacterController.draw(g2d); //draws Character
+		
 	}
 }

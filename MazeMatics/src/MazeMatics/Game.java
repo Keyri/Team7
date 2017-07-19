@@ -35,6 +35,7 @@ public class Game extends JPanel
 		new Room("EastHallway7", 300, 50, 0, 0, Color.white), //19
 	};
 	
+	
 	public Game() 
 	{			
 		//Constructor
@@ -75,6 +76,7 @@ public class Game extends JPanel
 		//Runs actions if not paused
 		if(!isPaused)
 		{
+			Question.PositionCheck();
 			player.move();
 			//More moves and actions here
 		}		

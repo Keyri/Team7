@@ -103,5 +103,9 @@ public class Room
 		g.setColor(borderColor);
 		g.setStroke(new BasicStroke(borderThickness)); //border thickness
 		g.drawRect(posX, posY, sizeX, sizeY); //border
+		
+		//Draws Question area
+		g.drawOval(600, 200, 25, 25);
+		g.drawOval(600, 600, 25, 25);
 	}
 }

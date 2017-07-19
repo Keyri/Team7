@@ -72,4 +72,28 @@ public class CharacterController
 		posY = y;
 		return x + ", " + y;	
 	}
+	
+	private static final int pPosY = 0;
+	private static final int pPosX = 0;
+	
+	public void setPosX(int pPosX)
+	{
+		 pPosX = CharacterController.posX;
+
+	}
+	
+	 static int getPosX()
+	{
+		return pPosX;
+	}
+	
+	public void setPosY(int pPosY)
+	{
+		 pPosY = CharacterController.posY;
+	}
+	
+	static int getPosY()
+	{
+		return pPosY;
+	}
 }
