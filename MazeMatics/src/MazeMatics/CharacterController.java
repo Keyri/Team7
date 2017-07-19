@@ -76,8 +76,7 @@ public class CharacterController
 		processInput();
 		posX += accX;
 		posY += accY;
-		mask.x = Game.player.getX();
-		mask = new Rectangle(Game.player.sizeX, sizeY, posX, posY);
+		mask = new Rectangle(sizeX, sizeY, posX, posY);
 		return posX + ", " + posY;
 	}
 	
